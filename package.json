@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "ascii-art": "^2.8.5",
+    "node-fetch": "^2.6.7",
+    "prompt-sync": "^4.2.0"
+  },
+  "name": "gitwrite-cli",
+  "description": "Write something on your contribution graph!",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gitwrite": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YodaLightsabr/gitwrite.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "YodaLightsabr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YodaLightsabr/gitwrite/issues"
+  },
+  "homepage": "https://github.com/YodaLightsabr/gitwrite#readme"
+}
