@@ -91,9 +91,9 @@ const j =
 const k =
 `
 #  #
-#  #
-###
-#  #
+# #
+##
+# #
 #  #
 `
 
@@ -368,6 +368,140 @@ const period =
 #
 `
 
+const colon = 
+`
+
+#
+
+#
+
+`
+
+const semicolon = 
+`
+
+ #
+
+ #
+#
+`
+
+const openparen = 
+`
+#
+ #
+ #
+ #
+#
+`
+
+const closeparen = 
+`
+ #
+#
+#
+#
+ #
+`
+
+const lessthan = 
+`
+  #
+ #
+#
+ #
+  #
+`
+
+const greaterthan = 
+`
+#
+ #
+  #
+ #
+#
+`
+
+const one = `
+ ##
+# #
+  #
+  #
+ ###
+`
+
+const two = `
+ ##
+#  #
+  #
+ #
+####
+`
+
+const three = `
+ ##
+#  #
+  #
+#  #
+ ##
+`
+
+const four = `
+#  #
+#  #
+####
+   #
+   #
+`
+
+const five = `
+####
+#  
+###  
+   #
+###
+`
+
+const six = `
+ #
+#
+### 
+#  #
+ ##
+`
+
+const seven = `
+####
+   #
+  #
+ #
+#
+`
+
+const eight = `
+ ##
+#  #
+ ##
+#  #
+ ##
+`
+
+const nine = `
+ ##
+#  #
+ ##
+#  #
+ ##
+`
+
+const zero = `
+ ###
+#  ##
+# # #
+##  #
+ ###
+`
+
 const letters = {
     a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z,
     '!': exclaimation,
@@ -384,7 +518,23 @@ const letters = {
     '=': equals,
     '_': underscore,
     ' ': space,
-    '.': period
+    '.': period,
+    ':': colon,
+    ';': semicolon,
+    '(': openparen,
+    ')': closeparen,
+    '<': lessthan,
+    '>': greaterthan,
+    '1': one,
+    '2': two,
+    '3': three,
+    '4': four,
+    '5': five,
+    '6': six,
+    '7': seven,
+    '8': eight,
+    '9': nine,
+    '0': zero
 };
 
 function daysLater (initial, days) {
