@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const art = require('ascii-art');
 const { exec } = require('child_process');
 const fetch = require('node-fetch');
 const prompt = require('prompt-sync')();
