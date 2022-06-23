@@ -9,4 +9,4 @@ Install the global CLI!
 ```sh
 npm install -g gitwrite-cli
 ```
-From there, run the `gitwrite` command in a new repository. Once you have a new repository, run `gitwrite <year> "<message>"`. The message must be in quotes. GitWrite will ask you for confirmation, and then make however many commits you need to add the text to your graph. If you ever want to remove it, just delete the GitHub repo.
+From there, run the `gitwrite` command in a new repository. Once you have a new repository, run `gitwrite <year> "<message>" <username>`. The message must be in quotes. The username should be your GitHub profile's username, and if not provided, GitWrite will get a username from your Git global config. GitWrite will ask you for confirmation, and then make however many commits you need to add the text to your graph. If you ever want to remove it, just delete the GitHub repo.
