@@ -13,18 +13,18 @@ process.argv.shift();
 if (isNaN(process.argv[0])) process.argv.shift();
 const args = process.argv;
 
-const [year, message] = args.map(v => isNaN(v) ? v : +v);
+const [year, message, username] = args.map(v => isNaN(v) ? v : +v);
 
 (async () => {
     if (!year || !message) return console.log('Welcome to GitWrite! GitWrite lets you add a message to your GitHub contribution graph. To begin, make a new GitHub repo, clone it locally, and get ready to add commits!\n\nRun this command again with this syntax: gitwrite <year> <message>.\nMessage should be in qotes. Messages can only have alphanumeric characters, spaces. and some symbols.');
 
-    const username = (await run('git config user.name')).trim();
-    const data = await fetch('https://api.github.com/users/' + username).then(r => r.json());
-    if (data.message) return console.log('Invalid GitHub username "' + username + '"');
+    const gitUsername = (await run('git config user.name')).trim();
+    const data = await fetch('https://api.github.com/users/' + (username ? username : gitUsername)).then(r => r.json());
+    if (data.message) return console.log('Invalid GitHub username "' + gitUsername + '"');
 
     const commands = type(year, message);
 
-    console.log(`Welcome, ${username}!`);
+    console.log(`Welcome, ${username ? username: gitUsername}!`);
     console.log(`Using git repo in directory ${process.cwd()},`);
     console.log(`Staging ${commands.length / 6} commits to write ${message} in ${year}...`);
     prompt('Press enter to continue...');
